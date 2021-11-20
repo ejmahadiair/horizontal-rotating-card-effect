@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrticl rotating card hover effect</title>
+    <style>
+        .box{
+            width: 400px;
+            margin: 0 auto;
+            position: relative;
+            perspective: 1000px;
+        }
+        .box .box-img{
+            transform:  rotateY(0);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .box-img{
+            transform:  rotateY(-90deg);
+        }
+        .box .box-img img{
+            width: 100%;
+            height: auto;
+        }
+        .box .box-contant{
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            padding: 60px 20px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0,0.7);
+            color: #fff;
+            transform: rotateY(90deg);
+            transition: all 0.5s ease-in-out;
+        }
+        .box:hover .box-contant{
+            transform: rotateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-img">
+            <img src="ej.jpg" alt="">
+        </div>
+        <div class="box-contant">
+            <h1>EJ MAHADI</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam ex laudantium consequatur. Impedit voluptatibus molestiae ex accusamus cumque, officiis voluptatum amet ullam pariatur dolores perspiciatis.</p>
+        </div>
+    </div>
+</body>
+</html>
